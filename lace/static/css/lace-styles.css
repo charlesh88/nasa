@@ -1,0 +1,87 @@
+/* line 7, ../sass/lace-styles.scss */
+body {
+  background: #fff7d0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 12, ../sass/lace-styles.scss */
+.disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/* line 16, ../sass/lace-styles.scss */
+.ds {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
+}
+
+/* line 20, ../sass/lace-styles.scss */
+.node {
+  background: #e8e8e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #b5b5b5;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+/* line 25, ../sass/lace-styles.scss */
+.node.enabled {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(70%, #e8e8e8));
+  background-image: -webkit-linear-gradient(#ffffff, #e8e8e8 70%);
+  background-image: -moz-linear-gradient(#ffffff, #e8e8e8 70%);
+  background-image: -o-linear-gradient(#ffffff, #e8e8e8 70%);
+  background-image: linear-gradient(#ffffff, #e8e8e8 70%);
+  -webkit-box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0 0;
+  -moz-box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0 0;
+  box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0 0;
+}
+/* line 28, ../sass/lace-styles.scss */
+.node.enabled:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(70%, #ffffff));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 70%);
+  background-image: -moz-linear-gradient(#ffffff, #ffffff 70%);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 70%);
+  background-image: linear-gradient(#ffffff, #ffffff 70%);
+}
+/* line 32, ../sass/lace-styles.scss */
+.node.disabled {
+  border: 1px dashed dimgrey;
+  font-style: italic;
+}
+/* line 35, ../sass/lace-styles.scss */
+.node.disabled:hover {
+  background: white;
+}
+
+/* line 43, ../sass/lace-styles.scss */
+.dialog {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background: white;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  z-index: 10;
+}
+
+/* line 56, ../sass/lace-styles.scss */
+.example {
+  min-height: 100px;
+  padding: 20px;
+}
+/* line 59, ../sass/lace-styles.scss */
+.example.node {
+  min-height: 20px;
+}

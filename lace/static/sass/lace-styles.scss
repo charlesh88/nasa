@@ -1,0 +1,62 @@
+@import "compass";
+@import "compass/css3";
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+@import "compass/utilities";
+
+body {
+  background: #fff7d0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.disabled {
+  @include opacity(0.5);
+}
+
+.ds {
+  @include box-shadow(rgba(#000,0.7) 0 4px 10px 2px);
+}
+
+.node {
+  $myBg: #e8e8e8;
+  background: $myBg;
+  @include border-radius(5px);
+  border:1px solid darken($myBg, 20%);
+  &.enabled {
+    @include background-image(linear-gradient(lighten($myBg, 10%), $myBg 70%));
+    @include box-shadow(inset rgba(#fff, 0.5) 0 1px 0 0);
+    &:hover {
+      @include background-image(linear-gradient(lighten($myBg, 60%), lighten($myBg, 20%) 70%));
+    }
+  }
+  &.disabled {
+    border:1px dashed darken($myBg, 50%);
+    font-style: italic;
+    &:hover {
+      background: lighten($myBg, 60%);
+    }
+  }
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.dialog {
+  $mySize: 300px;
+  @include border-radius(10px);
+  background: white;
+  height: $mySize;
+  width: $mySize;
+  position: absolute;
+  left: 50%; top: 50%;
+  margin-left: -$mySize/2;
+  margin-top: -$mySize/2;
+  z-index: 10;
+}
+
+.example {
+  min-height: 100px;
+  padding: 20px;
+  &.node {
+    min-height: 20px;
+  }
+}
