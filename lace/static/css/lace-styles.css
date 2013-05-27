@@ -85,3 +85,40 @@ body {
 .example.node {
   min-height: 20px;
 }
+
+/* line 65, ../sass/lace-styles.scss */
+div.wait-spinner {
+  background: url("../images/wait-spinner-onblack.gif") no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
+/* line 1, ../sass/_loading.scss */
+body.loading {
+  background: black url("../images/bg-loading-saturn.jpg") no-repeat;
+  background-size: cover;
+  color: #999;
+}
+/* line 6, ../sass/_loading.scss */
+body.loading #holder-main {
+  position: absolute;
+  width: 17%;
+  left: 70%;
+  top: 20%;
+  margin-left: -105px;
+  text-align: center;
+}
+/* line 13, ../sass/_loading.scss */
+body.loading #holder-main .logo {
+  margin-bottom: 30px;
+  width: 100%;
+}
+/* line 16, ../sass/_loading.scss */
+body.loading #holder-main .logo#logo-nasa {
+  width: 50%;
+}
+/* line 20, ../sass/_loading.scss */
+body.loading #holder-main .wait-spinner {
+  display: inline-block;
+  margin-top: 20px;
+}

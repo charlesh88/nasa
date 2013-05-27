@@ -60,3 +60,11 @@ body {
     min-height: 20px;
   }
 }
+
+
+div.wait-spinner {
+  background: url('../images/wait-spinner-onblack.gif') no-repeat;
+  width: 32px; height: 32px;
+}
+
+@import "_loading";

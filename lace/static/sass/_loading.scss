@@ -1,0 +1,25 @@
+body.loading {
+  background: #000 url('../images/bg-loading-saturn.jpg') no-repeat;
+  //background-position: center center;
+  background-size: cover;
+  color: #999;
+  #holder-main {
+    //background: rgba(red, 0.2);
+    position: absolute;
+    width: 17%;
+    left: 70%; top: 20%;
+    margin-left: -105px;
+    text-align: center;
+    .logo {
+      margin-bottom: 30px;
+      width: 100%;
+      &#logo-nasa {
+        width: 50%;
+      }
+    }
+    .wait-spinner {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+}
