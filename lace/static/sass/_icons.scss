@@ -1,0 +1,52 @@
+.icon, .alert-icon {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon {
+  $icon: 50px;
+  $iconAlert: 17px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: $icon; height: $icon;
+  .alert-icon {
+    background-image: url('../images/icon-alert-med.png');
+    display: none;
+    position: absolute;
+    width: $iconAlert; height: $iconAlert; 
+    top: 2px; right: 3px;
+    z-index: 1;
+  }
+  &.alert .alert-icon {
+    display: block;
+  }
+  &.image-2d {
+    background-image: url('../images/icon-image-2d.png');
+  }
+  &.map {
+    background-image: url('../images/icon-map.png');
+  }
+}
+
+.icons.small {
+  $icon: 36px;
+  $iconAlert: 13px;
+  .icon {
+    width: $icon; height: $icon;
+    .alert-icon {
+      width: $iconAlert; height: $iconAlert; 
+    }
+  }
+}
+
+.edit-title .icon {
+  $icon: 55px;
+  $iconAlert: 19px;
+  //margin-right: 5px;
+  width: $icon; height: $icon;
+  .alert-icon {
+    width: $iconAlert; height: $iconAlert; 
+  }
+}

@@ -5,8 +5,9 @@
 @import "compass/utilities";
 
 body {
-  background: #fff7d0;
   font-family: Helvetica, Arial, sans-serif;
+  margin: 0px;
+  overflow: hidden;
 }
 
 .disabled {
@@ -22,6 +23,7 @@ body {
   background: $myBg;
   @include border-radius(5px);
   border:1px solid darken($myBg, 20%);
+  padding: 2px 10px;
   &.enabled {
     @include background-image(linear-gradient(lighten($myBg, 10%), $myBg 70%));
     @include box-shadow(inset rgba(#fff, 0.5) 0 1px 0 0);
@@ -53,13 +55,14 @@ body {
   z-index: 10;
 }
 
+/*
 .example {
   min-height: 100px;
-  padding: 20px;
   &.node {
     min-height: 20px;
   }
 }
+*/
 
 
 div.wait-spinner {
@@ -67,4 +70,6 @@ div.wait-spinner {
   width: 32px; height: 32px;
 }
 
-@import "_loading";
+@import "loading";
+@import "icons";
+@import "layout";

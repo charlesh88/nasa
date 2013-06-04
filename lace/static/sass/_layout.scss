@@ -1,0 +1,80 @@
+$headerH: 60px;
+$footerH: 25px;
+$pad: 15px;
+$leftW: 320px;
+$leftBg: #ccc;
+$resizerW: 10px;
+$editTitleH: 65px;
+$dsxH: 7px;
+
+.abs {
+  //border: 1px dashed rgba(red, 0.3);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.container-header {
+  @include background-image(linear-gradient(#585858, #404040 60%));
+  @include box-shadow(black 0px 0px 15px);
+  color: #ccc;
+  height: $headerH; bottom: auto;
+}
+
+.header-ds {
+  height: $dsxH; 
+  top: $headerH; bottom: auto;
+}
+
+.container-mid {
+  top: $headerH; bottom: $footerH;
+  .container-left {
+    $myBg: #ccc;
+    @include background-image(linear-gradient(left, $myBg 98%, darken($myBg, 20%)));
+    width: $leftW; right: auto;
+    overflow: auto;
+  }
+  .resizer {
+    background: lighten($leftBg, 10%);
+    border-right: 1px solid darken($leftBg, 10%);
+    left: $leftW; right: auto; width: $resizerW - 1;
+  }
+  .container-right {
+    $myBg: #fff7d0;
+    background: $myBg;
+    left: $leftW + $resizerW;
+    min-width: 400px;
+    .edit-title {
+      font-size: 1.1em;
+      height: $editTitleH; bottom: auto;
+      padding-left: $pad;
+      line-height: $editTitleH;
+      text-transform: uppercase;
+    }
+    .edit-title-ds {
+      top: $editTitleH; height: $dsxH; bottom: auto;
+      .fade-down {
+        @include background-image(linear-gradient(left, $myBg 10%, rgba($myBg, 0)));
+        width: 200px; right: auto;
+      }     
+    }
+    .edit-wrapper {
+      padding: $pad;
+      overflow: auto;
+      top: $editTitleH;
+    }
+  }
+}
+.container-footer {
+  background: #404040;
+  color: #ccc;
+  height: $footerH; top: auto;
+}
+
+
+.dsx {
+  @include background-image(linear-gradient(rgba(black, 0.5), rgba(black, 0)));
+  pointer-events: none;
+  z-index: 1;
+}
+
+

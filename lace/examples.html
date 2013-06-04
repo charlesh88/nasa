@@ -3,14 +3,76 @@
   <link href="static/css/lace-styles.css" rel="stylesheet" />
 </head>
 <body>
-  <div id="node-example" class="example node enabled">
-    This is an enabled node container
+
+<header class="abs container container-header">This is the header</header>
+<div class="abs dsx header-ds">
+  <div class="abs fade-down"></div>
+</div>
+<div class="abs container container-mid">
+  <div class="abs container container-left">
+     This is the treeview
   </div>
-  <div id="node-example" class="example node disabled">
-    This is a disabled node container
+  <div class="abs resizer"></div>
+  <div class="abs container container-right">
+    <div class="abs container edit-title">
+      <a class="icon image-2d alert">
+        <div class="alert-icon"></div>
+      </a>
+      Identification_Area
+    </div>
+    <div class="abs dsx edit-title-ds">
+      <div class="abs fade-down"></div>
+    </div>
+    <div class="abs edit-wrapper">
+      <div id="node-example" class="example node enabled">
+        <a class="icon map"><div class="alert-icon"></div></a>This is an enabled node container
+      </div>
+      <div id="node-example" class="example node disabled">
+        <a class="icon map"><div class="alert-icon"></div></a>This is a disabled node container
+      </div>
+      
+      <h2>Large Icons</h2>
+      <fieldset class="icons large">
+      <a class="icon image-2d">
+        <div class="alert-icon"></div>
+      </a>
+      
+      <a class="icon image-2d alert">
+        <div class="alert-icon"></div>
+      </a>
+      
+      <a class="icon map">
+        <div class="alert-icon"></div>
+      </a>
+      
+      <a class="icon map alert">
+        <div class="alert-icon"></div>
+      </a>
+      </fieldset>
+      
+      <h2>Small Icons</h2>
+      <fieldset class="icons small">
+      <a class="icon image-2d">
+        <div class="alert-icon"></div>
+      </a>
+      
+      <a class="icon image-2d alert">
+        <div class="alert-icon"></div>
+      </a>
+      
+      <a class="icon map">
+        <div class="alert-icon"></div>
+      </a>
+      
+      <a class="icon map alert">
+        <div class="alert-icon"></div>
+      </a>
+      </fieldset>
+    </div>
   </div>
-  <div id="dialog-example" class="example dialog rounded ds">
-    This is a dialog with a drop shadow
-  </div>
+</div>
+<footer class="abs container container-footer">
+  This is the footer
+</footer>
 </body>
 </html>
