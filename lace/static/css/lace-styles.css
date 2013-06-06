@@ -158,27 +158,31 @@ body.loading #holder-main .wait-spinner {
   background-image: url("../images/icon-image-2d.png");
 }
 /* line 28, ../sass/_icons.scss */
+.icon.collection {
+  background-image: url("../images/icon-collection.png");
+}
+/* line 31, ../sass/_icons.scss */
 .icon.map {
   background-image: url("../images/icon-map.png");
 }
 
-/* line 36, ../sass/_icons.scss */
+/* line 39, ../sass/_icons.scss */
 .icons.small .icon {
   width: 36px;
   height: 36px;
 }
-/* line 38, ../sass/_icons.scss */
+/* line 41, ../sass/_icons.scss */
 .icons.small .icon .alert-icon {
   width: 13px;
   height: 13px;
 }
 
-/* line 44, ../sass/_icons.scss */
+/* line 47, ../sass/_icons.scss */
 .edit-title .icon {
   width: 55px;
   height: 55px;
 }
-/* line 49, ../sass/_icons.scss */
+/* line 52, ../sass/_icons.scss */
 .edit-title .icon .alert-icon {
   width: 19px;
   height: 19px;
