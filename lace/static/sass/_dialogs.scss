@@ -1,0 +1,30 @@
+@mixin dialog($myW, $myH, $myPad) {
+  @include text-shadow(rgba(#000, 0.5) 0px 1px 2px);
+  height: $myH - ($myPad * 2); width: $myW - ($myPad * 2);
+  position: absolute;
+  left: 50%; top: 50%;
+  padding: $myPad;
+  margin-left: -$myW/2; margin-top: -$myH/2;
+  z-index: 10;
+}
+
+.dialog {
+  &.start {
+    @include dialog(460px, 230px, 30px);
+    &.glass {
+      @include border-radius(10px);
+      @include box-shadow(rgba(#000, 0.3) 0 1px 5px);
+      background: rgba(#fff, 0.15);
+    }
+  }
+  
+  &.wait {
+    @include dialog(200px, 100px, 0px);
+    text-align: center;
+  }
+}
+
+.wait-spinner {
+  display: inline-block;
+  margin-top: 20px;
+}

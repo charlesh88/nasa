@@ -1,24 +1,45 @@
 /* line 7, ../sass/lace-styles.scss */
 body {
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
   margin: 0px;
   overflow: hidden;
 }
 
-/* line 13, ../sass/lace-styles.scss */
+/* line 14, ../sass/lace-styles.scss */
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* line 18, ../sass/lace-styles.scss */
+h1 {
+  font-size: 1.7em;
+}
+
+/* line 22, ../sass/lace-styles.scss */
+.centered {
+  text-align: center;
+}
+
+/* line 26, ../sass/lace-styles.scss */
 .disabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 
-/* line 17, ../sass/lace-styles.scss */
+/* line 30, ../sass/lace-styles.scss */
 .ds {
   -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
   box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
 }
 
-/* line 21, ../sass/lace-styles.scss */
+/* line 34, ../sass/lace-styles.scss */
+.hide {
+  display: none;
+}
+
+/* line 38, ../sass/lace-styles.scss */
 .node {
   background: #e8e8e8;
   -webkit-border-radius: 5px;
@@ -31,7 +52,7 @@ body {
   cursor: pointer;
   margin-bottom: 10px;
 }
-/* line 27, ../sass/lace-styles.scss */
+/* line 44, ../sass/lace-styles.scss */
 .node.enabled {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(70%, #e8e8e8));
   background-image: -webkit-linear-gradient(#ffffff, #e8e8e8 70%);
@@ -42,7 +63,7 @@ body {
   -moz-box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0 0;
   box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0 0;
 }
-/* line 30, ../sass/lace-styles.scss */
+/* line 47, ../sass/lace-styles.scss */
 .node.enabled:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(70%, #ffffff));
   background-image: -webkit-linear-gradient(#ffffff, #ffffff 70%);
@@ -50,43 +71,17 @@ body {
   background-image: -o-linear-gradient(#ffffff, #ffffff 70%);
   background-image: linear-gradient(#ffffff, #ffffff 70%);
 }
-/* line 34, ../sass/lace-styles.scss */
+/* line 51, ../sass/lace-styles.scss */
 .node.disabled {
   border: 1px dashed dimgrey;
   font-style: italic;
 }
-/* line 37, ../sass/lace-styles.scss */
+/* line 54, ../sass/lace-styles.scss */
 .node.disabled:hover {
   background: white;
 }
 
-/* line 45, ../sass/lace-styles.scss */
-.dialog {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  background: white;
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -150px;
-  margin-top: -150px;
-  z-index: 10;
-}
-
-/*
-.example {
-  min-height: 100px;
-  &.node {
-    min-height: 20px;
-  }
-}
-*/
-/* line 68, ../sass/lace-styles.scss */
+/* line 62, ../sass/lace-styles.scss */
 div.wait-spinner {
   background: url("../images/wait-spinner-onblack.gif") no-repeat;
   width: 32px;
@@ -99,28 +94,60 @@ body.loading {
   background-size: cover;
   color: #999;
 }
-/* line 6, ../sass/_loading.scss */
-body.loading #holder-main {
+/* line 5, ../sass/_loading.scss */
+body.loading h1 {
+  color: #fff;
+  font-weight: normal;
+}
+/* line 9, ../sass/_loading.scss */
+body.loading #holder-logos {
   position: absolute;
-  width: 17%;
-  left: 70%;
-  top: 20%;
-  margin-left: -105px;
-  text-align: center;
+  right: 20px;
+  top: 20px;
 }
 /* line 13, ../sass/_loading.scss */
-body.loading #holder-main .logo {
-  margin-bottom: 30px;
-  width: 100%;
+body.loading #holder-logos .logo {
+  position: absolute;
 }
-/* line 16, ../sass/_loading.scss */
-body.loading #holder-main .logo#logo-nasa {
-  width: 50%;
+/* line 15, ../sass/_loading.scss */
+body.loading #holder-logos .logo#logo-nasa {
+  right: 0;
+  top: 2px;
 }
-/* line 20, ../sass/_loading.scss */
-body.loading #holder-main .wait-spinner {
+/* line 19, ../sass/_loading.scss */
+body.loading #holder-logos .logo#logo-lace {
+  height: 80px;
+  right: 95px;
+}
+
+/* line 1, ../sass/_buttons.scss */
+.btn {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6d6d6d), color-stop(100%, #5e5e5e));
+  background-image: -webkit-linear-gradient(#6d6d6d, #5e5e5e);
+  background-image: -moz-linear-gradient(#6d6d6d, #5e5e5e);
+  background-image: -o-linear-gradient(#6d6d6d, #5e5e5e);
+  background-image: linear-gradient(#6d6d6d, #5e5e5e);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px, rgba(255, 255, 255, 0.5) 0px -1px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px, rgba(255, 255, 255, 0.5) 0px -1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px, rgba(255, 255, 255, 0.5) 0px -1px 1px;
+  color: #fff;
+  cursor: pointer;
   display: inline-block;
-  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 25px;
+}
+/* line 10, ../sass/_buttons.scss */
+.btn:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #888888), color-stop(100%, #666666));
+  background-image: -webkit-linear-gradient(#888888, #666666);
+  background-image: -moz-linear-gradient(#888888, #666666);
+  background-image: -o-linear-gradient(#888888, #666666);
+  background-image: linear-gradient(#888888, #666666);
 }
 
 /* line 1, ../sass/_icons.scss */
@@ -298,4 +325,50 @@ body.loading #holder-main .wait-spinner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   pointer-events: none;
   z-index: 1;
+}
+
+/* line 12, ../sass/_dialogs.scss */
+.dialog.start {
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+  height: 170px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 30px;
+  margin-left: -230px;
+  margin-top: -115px;
+  z-index: 10;
+}
+/* line 14, ../sass/_dialogs.scss */
+.dialog.start.glass {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px;
+  background: rgba(255, 255, 255, 0.15);
+}
+/* line 21, ../sass/_dialogs.scss */
+.dialog.wait {
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 0px;
+  margin-left: -100px;
+  margin-top: -50px;
+  z-index: 10;
+  text-align: center;
+}
+
+/* line 27, ../sass/_dialogs.scss */
+.wait-spinner {
+  display: inline-block;
+  margin-top: 20px;
 }
