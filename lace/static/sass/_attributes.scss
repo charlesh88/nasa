@@ -1,0 +1,15 @@
+.attrib {
+  font-size: .8em;
+  line-height: 30px;
+}
+
+.dropline {
+  @include border-bottom-left-radius(3px);
+  display: inline-block;
+  border:1px solid #cecece;
+  border-right: none;
+  border-top: none;
+  height: 15px; width: 15px;
+  margin-left: 0px; margin-right: 5px;
+  vertical-align: top;
+}

@@ -150,6 +150,41 @@ body.loading #holder-logos .logo#logo-lace {
   background-image: linear-gradient(#888888, #666666);
 }
 
+/* line 15, ../sass/_buttons.scss */
+.btnArw {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(70%, #e8e8e8));
+  background-image: -webkit-linear-gradient(#ffffff, #e8e8e8 70%);
+  background-image: -moz-linear-gradient(#ffffff, #e8e8e8 70%);
+  background-image: -o-linear-gradient(#ffffff, #e8e8e8 70%);
+  background-image: linear-gradient(#ffffff, #e8e8e8 70%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #b2b2b2;
+  padding: 4px;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+}
+/* line 24, ../sass/_buttons.scss */
+.btnArw:hover {
+  background: #e8e8e8;
+}
+/* line 26, ../sass/_buttons.scss */
+.btnArw:hover .arw {
+  border-top-color: #333;
+}
+/* line 30, ../sass/_buttons.scss */
+.btnArw .arw {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #666666;
+}
+
 /* line 1, ../sass/_icons.scss */
 .icon, .alert-icon {
   background-repeat: no-repeat;
@@ -213,6 +248,22 @@ body.loading #holder-logos .logo#logo-lace {
 .edit-title .icon .alert-icon {
   width: 19px;
   height: 19px;
+}
+
+/* line 57, ../sass/_icons.scss */
+.dropline {
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: inline-block;
+  border: 1px solid #cecece;
+  border-right: none;
+  border-top: none;
+  height: 15px;
+  width: 10px;
+  margin-left: 0px;
+  margin-right: 5px;
+  vertical-align: top;
 }
 
 /* line 10, ../sass/_layout.scss */
@@ -371,4 +422,37 @@ body.loading #holder-logos .logo#logo-lace {
 .wait-spinner {
   display: inline-block;
   margin-top: 20px;
+}
+
+/* line 1, ../sass/_elements.scss */
+.property {
+  border-top: 1px solid #b2b2b2;
+  font-size: .8em;
+  line-height: 30px;
+  margin-left: 22px;
+  padding-left: 22px;
+}
+
+/* line 10, ../sass/_elements.scss */
+.attrib {
+  border-top: 1px solid #cecece;
+  line-height: 30px;
+  padding-top: 3px;
+}
+
+/* line 16, ../sass/_elements.scss */
+.autoSuggest {
+  background: white;
+  border: 1px solid #ccc;
+  display: inline-block;
+  line-height: 100%;
+  margin-left: 5px;
+  padding: 10px;
+  position: relative;
+  width: 70%;
+}
+
+/* line 1, ../sass/_misc.scss */
+em {
+  color: #999;
 }
