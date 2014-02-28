@@ -7,39 +7,44 @@ body {
 }
 
 /* line 14, ../sass/lace-styles.scss */
+input {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 18, ../sass/lace-styles.scss */
 h1, h2, h3 {
   margin: 0;
 }
 
-/* line 18, ../sass/lace-styles.scss */
+/* line 22, ../sass/lace-styles.scss */
 h1 {
   font-size: 1.7em;
 }
 
-/* line 22, ../sass/lace-styles.scss */
+/* line 26, ../sass/lace-styles.scss */
 .centered {
   text-align: center;
 }
 
-/* line 26, ../sass/lace-styles.scss */
+/* line 30, ../sass/lace-styles.scss */
 .disabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 
-/* line 30, ../sass/lace-styles.scss */
+/* line 34, ../sass/lace-styles.scss */
 .ds {
   -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
   box-shadow: rgba(0, 0, 0, 0.7) 0 4px 10px 2px;
 }
 
-/* line 34, ../sass/lace-styles.scss */
+/* line 38, ../sass/lace-styles.scss */
 .hide {
   display: none;
 }
 
-/* line 38, ../sass/lace-styles.scss */
+/* line 42, ../sass/lace-styles.scss */
 .node {
   background: #e8e8e8;
   -webkit-border-radius: 5px;
@@ -52,7 +57,7 @@ h1 {
   cursor: pointer;
   margin-bottom: 10px;
 }
-/* line 44, ../sass/lace-styles.scss */
+/* line 48, ../sass/lace-styles.scss */
 .node.enabled {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(70%, #e8e8e8));
   background-image: -webkit-linear-gradient(#ffffff, #e8e8e8 70%);
@@ -63,7 +68,7 @@ h1 {
   -moz-box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0 0;
   box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0 0;
 }
-/* line 47, ../sass/lace-styles.scss */
+/* line 51, ../sass/lace-styles.scss */
 .node.enabled:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(70%, #ffffff));
   background-image: -webkit-linear-gradient(#ffffff, #ffffff 70%);
@@ -71,17 +76,17 @@ h1 {
   background-image: -o-linear-gradient(#ffffff, #ffffff 70%);
   background-image: linear-gradient(#ffffff, #ffffff 70%);
 }
-/* line 51, ../sass/lace-styles.scss */
+/* line 55, ../sass/lace-styles.scss */
 .node.disabled {
   border: 1px dashed dimgrey;
   font-style: italic;
 }
-/* line 54, ../sass/lace-styles.scss */
+/* line 58, ../sass/lace-styles.scss */
 .node.disabled:hover {
   background: white;
 }
 
-/* line 62, ../sass/lace-styles.scss */
+/* line 66, ../sass/lace-styles.scss */
 div.wait-spinner {
   background: url("../images/wait-spinner-onblack.gif") no-repeat;
   width: 32px;
@@ -163,21 +168,23 @@ body.loading #holder-logos .logo#logo-lace {
   -o-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #b2b2b2;
-  padding: 4px;
-  position: absolute;
-  right: 5px;
-  top: 8px;
+  position: relative;
 }
-/* line 24, ../sass/_buttons.scss */
+/* line 21, ../sass/_buttons.scss */
 .btnArw:hover {
   background: #e8e8e8;
 }
-/* line 26, ../sass/_buttons.scss */
+/* line 23, ../sass/_buttons.scss */
 .btnArw:hover .arw {
   border-top-color: #333;
 }
-/* line 30, ../sass/_buttons.scss */
+/* line 27, ../sass/_buttons.scss */
 .btnArw .arw {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -25%;
+  margin-top: -15%;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -433,23 +440,59 @@ body.loading #holder-logos .logo#logo-lace {
   padding-left: 22px;
 }
 
-/* line 10, ../sass/_elements.scss */
+/* line 9, ../sass/_elements.scss */
 .attrib {
   border-top: 1px solid #cecece;
-  line-height: 30px;
   padding-top: 3px;
 }
 
-/* line 16, ../sass/_elements.scss */
-.autoSuggest {
+/* line 17, ../sass/_elements.scss */
+.inputWrapper.outer {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
   background: white;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   display: inline-block;
+  height: 30px;
   line-height: 100%;
   margin-left: 5px;
-  padding: 10px;
   position: relative;
+  vertical-align: middle;
   width: 70%;
+}
+/* line 29, ../sass/_elements.scss */
+.inputWrapper.outer .btnArw {
+  position: absolute;
+  height: auto;
+  width: 20px;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: auto;
+}
+/* line 36, ../sass/_elements.scss */
+.inputWrapper.inner {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  bottom: 5px;
+  left: 5px;
+}
+/* line 40, ../sass/_elements.scss */
+.inputWrapper.inner input {
+  background: #ddffdd;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+/* line 45, ../sass/_elements.scss */
+.inputWrapper.inner input .hint {
+  color: #666;
+  font-style: italic;
 }
 
 /* line 1, ../sass/_misc.scss */

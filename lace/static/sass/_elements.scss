@@ -1,7 +1,6 @@
 .property {
   border-top:1px solid #b2b2b2;
   font-size: .8em;
-  //background-color: red;
   line-height: 30px;
   margin-left: 22px;
   padding-left: 22px;
@@ -9,19 +8,46 @@
 
 .attrib {
   border-top:1px solid #cecece;
-  line-height: 30px;
   padding-top: 3px;
 }
 
-.autoSuggest {
-  background: white;
-  border: 1px solid #ccc;
-  display: inline-block;
-  line-height: 100%;
-  margin-left: 5px;
-  padding: 10px;
-  position: relative;
-  width: 70%;
+.inputWrapper {
+  $margin: 5px;
+  $btnArwW: 20px;
+  &.outer {
+    @include border-radius(3px);
+    background: white;
+    border: 1px solid #ccc;
+    display: inline-block;
+    height: 30px;
+    line-height: 100%;
+    margin-left: 5px;
+    //padding: 5px;
+    position: relative;
+    vertical-align: middle;
+    width: 70%;
+    .btnArw {
+      position: absolute;
+      height: auto; width: $btnArwW;
+      top: $margin; right: $margin; bottom: $margin; left: auto;
+    }
+  }
+  
+  &.inner {
+    //background: #ff6600;
+    position: absolute;
+    top: $margin; right: $btnArwW + ($margin * 2); bottom: $margin; left: $margin;
+    input {
+      background: #ddffdd;
+      border:none;
+      height: 100%; width: 100%;
+      padding: 0;
+      .hint {
+        color: #666;
+        font-style: italic;
+      }
+    }
+  }
 }
 
 

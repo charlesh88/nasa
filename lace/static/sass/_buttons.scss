@@ -17,10 +17,7 @@
     @include background-image(linear-gradient(lighten($myBg, 10%), $myBg 70%));
     @include border-radius(3px);
     border: 1px solid #b2b2b2;
-    padding: 4px;
-    position: absolute;
-    right: 5px;
-    top: 8px;
+    position: relative;
     &:hover {
       background: $myBg;
       .arw {
@@ -29,6 +26,9 @@
     }
     .arw {
       $mySize: 5px;
+      position: absolute;
+      left: 50%; top: 50%;
+      margin-left: -25%; margin-top: -15%;
     	width: 0; height: 0;
       border-left: $mySize solid transparent;
       border-right: $mySize solid transparent;

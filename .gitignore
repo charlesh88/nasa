@@ -5,3 +5,4 @@
 *.zip
 *.gzip
 *.tgz
+*.DS_Store
