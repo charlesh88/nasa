@@ -1,5 +1,5 @@
 .property {
-  border-top:1px solid #b2b2b2;
+//  border-top:1px solid #b2b2b2;
   font-size: .8em;
   line-height: 30px;
   margin-left: 22px;
@@ -7,7 +7,7 @@
 }
 
 .attrib {
-  border-top:1px solid #cecece;
+//  border-top:1px solid #cecece;
   padding-top: 3px;
 }
 
@@ -16,8 +16,9 @@
   $btnArwW: 20px;
   &.outer {
     @include border-radius(3px);
-    background: white;
+//    background: $colorInput;
     border: 1px solid #ccc;
+		border-bottom-color: #fff;
     display: inline-block;
     height: 30px;
     line-height: 100%;
@@ -38,7 +39,8 @@
     position: absolute;
     top: $margin; right: $btnArwW + ($margin * 2); bottom: $margin; left: $margin;
     input {
-      background: #ddffdd;
+//      background: #ddffdd;
+			background: none;
       border:none;
       height: 100%; width: 100%;
       padding: 0;
